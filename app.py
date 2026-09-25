@@ -91,8 +91,8 @@ einnahmen_gesamt_2027 = einnahmen_2027 + einnahmen_arbeitsdienst
 
 col1, col2, col3 = st.columns(3)
 col1.metric("Beiträge 2026", f"{einnahmen_2026:,.2f} €")
-col2.metric("Beiträge 2027 (ohne AD)", f"{einnahmen_2027:,.2f} €", delta=f"{einnahmen_2027 - einnahmen_2026:,.2f} €")
-col3.metric("Gesamteinnahmen 2027 (inkl. AD)", f"{einnahmen_gesamt_2027:,.2f} €")
+col2.metric("Beiträge 2027", f"{einnahmen_2027:,.2f} €", delta=f"{einnahmen_2027 - einnahmen_2026:,.2f} €")
+col3.metric("Gesamteinnahmen 2027 (inkl. Arbeitsdienst)", f"{einnahmen_gesamt_2027:,.2f} €", delta=f"{einnahmen_2027 - einnahmen_2026:,.2f} €")
 
 st.markdown("---")
 
