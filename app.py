@@ -100,43 +100,27 @@ st.subheader("📊 Detailübersicht Arbeitsdienst")
 ad_col1, ad_col2, ad_col3 = st.columns(3)
 ad_col1.write(f"**Arbeitspflichtige Mitglieder:** {arbeitsdienst_pflichtige}")
 ad_col2.write(f"**Soll-Stunden gesamt:** {arbeitsdienst_pflichtige * ad_stunden:.0f} Std.")
-ad_col3.write(f"**Erwartete Einnahmen (Ablöse):** {einnahmen_arbeitsdienst:,.2f} €")
+ad_col3.write(f"**Erwartete Einnahmen:** {einnahmen_arbeitsdienst:,.2f} €")
 
 st.markdown("---")
 
 st.subheader("💡 Kostenvergleich für Familien")
-st.markdown("Vergleich derregulären Einzelbeiträge im Vergleich zum neuen Familienbeitrag:")
+st.markdown("Vergleich der regulären Einzelbeiträge im Vergleich zum neuen Familienbeitrag:")
 
-v_col1, v_col2, v_col3, v_col4 = st.columns(4)
+v_col1, v_col2 = st.columns(2)
 
 with v_col1:
-    einzel_2e_1j = b_epm + b_jm
-    diff_2e_1j = b_fm_2e - einzel_2e_1j
-    st.markdown("**2 E + 1 J**")
-    st.write(f"Einzel: {einzel_2e_1j} €")
-    st.write(f"Familie: {b_fm_2e} €")
-    st.write(f"**Differenz: {diff_2e_1j} €**")
-
-with v_col2:
     einzel_2e_1k = b_epm + b_km
     diff_2e_1k = b_fm_2e - einzel_2e_1k
-    st.markdown("**2 E + 1 K**")
+    st.markdown("**2 Erwachsene + 1 Kind**")
     st.write(f"Einzel: {einzel_2e_1k} €")
     st.write(f"Familie: {b_fm_2e} €")
     st.write(f"**Differenz: {diff_2e_1k} €**")
 
-with v_col3:
-    einzel_1e_1j = b_em + b_jm
-    diff_1e_1j = b_fm_1e - einzel_1e_1j
-    st.markdown("**1 E + 1 J**")
-    st.write(f"Einzel: {einzel_1e_1j} €")
-    st.write(f"Familie: {b_fm_1e} €")
-    st.write(f"**Differenz: {diff_1e_1j} €**")
-
-with v_col4:
+with v_col2:
     einzel_1e_1k = b_em + b_km
     diff_1e_1k = b_fm_1e - einzel_1e_1k
-    st.markdown("**1 E + 1 K**")
+    st.markdown("**1 Erwachsener + 1 Kind**")
     st.write(f"Einzel: {einzel_1e_1k} €")
     st.write(f"Familie: {b_fm_1e} €")
     st.write(f"**Differenz: {diff_1e_1k} €**")
