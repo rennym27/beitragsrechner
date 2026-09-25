@@ -54,7 +54,7 @@ einnahmen_2026 = (n_erwachsene * b2026_em +
                   n_pm * b2026_pm)
 
 # Betroffene Personen in Familientarifen
-fm_erwachsene = n_fm_2e * 2 + n_fm_1e
+fm_erwachsene = n_fm_1e
 fm_ehepaare = n_fm_2e * 2
 fm_vm = 0  # laut Matrix
 fm_jm = 8  # laut Matrix aus Excel Tabelle2
